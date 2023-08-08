@@ -50,7 +50,9 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
         child: Column(
           children: [
             const Text(" The chart"),
-            Expanded(child: Expense_List(expenses: _registeredExpenses))
+            Expanded(
+              child: Expense_List(expenses: _registeredExpenses),
+            ),
           ],
         ),
       ),
