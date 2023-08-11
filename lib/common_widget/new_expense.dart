@@ -110,7 +110,7 @@ class _NewExpenseState extends State<NewExpense> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(_selectedDate == null
-                        ? "no Selected date"
+                        ? "No Selected Date"
                         : formatter.format(_selectedDate!)),
                     IconButton(
                       onPressed: _presentDatePicker,
