@@ -6,9 +6,8 @@ var kColorScheme = ColorScheme.fromSeed(
 );
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: Color.fromARGB(255, 60, 177, 192),
+  seedColor: const Color.fromARGB(255, 6, 92, 104),
 );
-
 
 void main() {
   runApp(
@@ -22,8 +21,15 @@ void main() {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: kDarkColorScheme.secondaryContainer),
+              backgroundColor: kDarkColorScheme.secondaryContainer,
+              foregroundColor: kDarkColorScheme.onSecondaryContainer),
         ),
+        textTheme: ThemeData().textTheme.copyWith(
+              titleLarge: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: kDarkColorScheme.onSecondaryContainer),
+            ),
       ),
       theme: ThemeData().copyWith(
         useMaterial3: true,
@@ -37,7 +43,8 @@ void main() {
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-              backgroundColor: kColorScheme.secondaryContainer),
+              backgroundColor: kColorScheme.secondaryContainer,
+              foregroundColor: kColorScheme.onSecondaryContainer),
         ),
         textTheme: ThemeData().textTheme.copyWith(
               titleLarge: TextStyle(
