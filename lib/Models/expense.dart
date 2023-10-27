@@ -53,4 +53,6 @@ class ExpenseBucket {
     }
     return sum;
   }
+
+  static forCategory(List<Expense> expenses, Category food) {}
 }
